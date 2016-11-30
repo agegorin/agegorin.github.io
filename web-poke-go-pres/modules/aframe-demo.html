@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aframe demo</title>
+</head>
+<body>
+    <script src="//aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <a-scene class="aframe-scene" style="width:100%">
+        <a-entity>
+            <a-sphere position="0 1 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+
+            <a-animation attribute="rotation"
+                         dur="10000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite"></a-animation>
+        </a-entity>
+        <a-sky color="#ECECEC"></a-sky>
+        <a-entity position="0 0 3.8">
+            <a-camera></a-camera>
+        </a-entity>
+    </a-scene>
+</body>
+</html>

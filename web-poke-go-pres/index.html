@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/shower-htc/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Shower Presentation Engine</h1>
+        <p>Yours Truly, Famous Inc.</p>
+    </header>
+    <section class="slide" id="cover">
+        <h2>Pokémon Go<br/>на веб-технологиях</h2>
+        <p>Егор Коновалов, ЦВТ</p>
+        <img src="pictures/cover.jpg" alt="" class="cover">
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: #005EA0;
+                text-shadow: #000 1px 1px 2px, #fff -1px -1px 2px;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: #000;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: #FFF;
+            }
+
+            #cover img {
+                opacity: .5;
+            }
+
+            #cover::before{
+                background: none;
+            }
+        </style>
+    </section>
+    <section class="slide" id="who_am_i">
+        <h2>Егор Коновалов</h2>
+        <img src="pictures/agegorin.jpg" height="300" />
+        <ul>
+            <li>Фронтенд-разработчик в ЦВТ.</li>
+            <li>Делаю на веб технологиях игры, приложения для телевизоров, VR приложения.</li>
+            <li>Слежу за развитием фронтенда.</li>
+            <li>Хочу внести свой вклад.</li>
+        </ul>
+        <style>
+            #who_am_i img {
+                float: left;
+                margin-right: 30px;
+            }
+            #who_am_i li:before {
+                content: '';
+            }
+        </style>
+    </section>
+    <section class="slide" id="what_is_pokemon_go">
+        <h2>Что это за игра?</h2>
+        <ul>
+            <li>location-based</li>
+            <li>augmented reality</li>
+            <ul class="next">
+                <li>положение в пространстве</li>
+                <li>изображение с камеры</li>
+                <li>3D</li>
+            </ul>
+        </ul>
+    </section>
+    <section class="slide" id="whatthe-geo">
+        <img src="pictures/whatthe-geodude.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-geo-view">
+        <h2 class="next">Geodude</h2>
+        <img src="pictures/whatthe-geodude-view.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="geolocation">
+        <h2>Геолокация</h2>
+        <img src="pictures/geodude.png" height="200" alt="Geodude" />
+        <style>
+            #geolocation img {
+                position: absolute;
+                bottom: 50px;
+                left: 100px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="geolocation-description">
+        <h2>Геолокация</h2>
+        <p>Стандарт: <a href="https://www.w3.org/TR/geolocation-API/">www.w3.org/TR/geolocation-API</a></p>
+        <p>Recommendation (8 November 2016)</p>
+    </section>
+    <section class="slide" id="geolocation-demo">
+        <input type="button" class="btn js-geo-show" value="Получить координаты" />
+        <p class="result js-geo-display"></p>
+        <script>
+          (function(){
+            var shw = document.querySelector('.js-geo-show');
+            var dspl = document.querySelector('.js-geo-display');
+
+            shw.addEventListener('click',function () {
+              if( !navigator.geolocation ) {
+                dspl.innerText = 'Geolocation не поддерживается';
+                return;
+              }
+
+              navigator.geolocation.getCurrentPosition(
+                function(position){
+                  dspl.innerText =
+                    'longitude: ' + position.coords.longitude + '\n' +
+                    'latitude:  ' + position.coords.latitude
+                  ;
+                },
+                function(error){
+                  dspl.innerText = 'Error: ' + JSON.stringify(error);
+                }
+              );
+            });
+          })();
+        </script>
+        <style>
+            #geolocation-demo .btn{
+                font-size: 2em;
+                padding: 10px 40px;
+            }
+            #geolocation-demo .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
+    <section class="slide" id="geolocation-code">
+        <pre>
+            <code>navigator.geolocation.<mark>getCurrentPosition</mark>(</code>
+            <code>    function(position){</code>
+            <code>      dspl.innerText =</code>
+            <code>        'longitude: ' + position.coords.longitude + '\n' +</code>
+            <code>        'latitude:  ' + position.coords.latitude</code>
+            <code>      ;}</code>
+            <code>);</code>
+        </pre>
+    </section>
+    <section class="slide" id="geolocation-additional">
+        <pre>
+            <code>position.coords.longitude</code>
+            <code>position.coords.latitude</code>
+            <code>position.coords.altitude (optional)</code>
+            <code>position.coords.accuracy</code>
+            <code>position.coords.altitudeAccuracy (optional)</code>
+            <code>position.coords.heading</code>
+            <code>position.coords.speed</code>
+            <code>position.timestamp</code>
+        </pre>
+    </section>
+    <section class="slide" id="geolocation-support">
+        <img src="pictures/geolocation-support.png" height="400" />
+    </section>
+
+    <!-- Device orientation block -->
+    <section class="slide" id="whatthe-do">
+        <img src="pictures/whatthe-magnemite.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-do-view">
+        <h2 class="next">Magnemite</h2>
+        <img src="pictures/whatthe-magnemite-view.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="device_orientation">
+        <h2>Положение устройства в пространстве</h2>
+        <img src="pictures/magnemite.png" height="240" alt="Magnemite" />
+        <style>
+            #device_orientation img {
+                position: absolute;
+                bottom: 50px;
+                left: 100px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device_orientation-description">
+        <h2>Положение устройства в пространстве</h2>
+        <p>Стандарт: <a href="https://www.w3.org/TR/orientation-event/">www.w3.org/TR/orientation-event</a></p>
+        <p>Candidate Recommendation (18 August 2016)</p>
+    </section>
+    <section class="slide" id="device-orientation-demo">
+        <h2>Device Orientation Demo</h2>
+        <p class="result js-devorient-display">Device Orientation detection in progress...</p>
+        <script>
+          (function(){
+            var dspl = document.querySelector('.js-devorient-display');
+
+            window.addEventListener('deviceorientation',
+              function(event){
+                dspl.innerText =
+                  'alpha: ' + event.alpha + '\n' +
+                  'beta:  ' + event.beta + '\n' +
+                  'gamma:  ' + event.gamma
+                ;
+              }
+            );
+
+          })();
+        </script>
+        <style>
+            #device-orientation-demo .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-orientation-code">
+        <pre>
+            <code>window.addEventListener('<mark>deviceorientation</mark>',</code>
+            <code>  function(event){</code>
+            <code>    dspl.innerText =</code>
+            <code>      'alpha: ' + event.alpha + '\n' +</code>
+            <code>      'beta:  ' + event.beta + '\n' +</code>
+            <code>      'gamma:  ' + event.gamma</code>
+            <code>    ;</code>
+            <code>  }</code>
+            <code>);</code>
+        </pre>
+    </section>
+    <section class="slide" id="device-orientation-image">
+        <img src="pictures/device-orientation.png" height="500px" />
+        <p>Изображения - <a href="https://dev.opera.com/articles/w3c-device-orientation-api/">dev.opera.com</a></p>
+        <style>
+            #device-orientation-image p{
+                position: absolute;
+                bottom: 0;
+                left: 30px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-motion-demo">
+        <h2>Device Motion Demo</h2>
+        <p class="result">Get phone in your hands...</p>
+        <style>
+            #device-motion-demo .result{
+                padding: 40px;
+                font-size: 2em;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device-motion-code">
+        <pre>
+            <code>window.addEventListener('<mark>devicemotion</mark>',</code>
+            <code>  function (event) {</code>
+            <code>    do_something(</code>
+            <code>      event.acceleration.x, // y, z</code>
+            <code>      event.accelerationIncludingGravity.x, // y, z</code>
+            <code>      event.rotationRate.alpha, // beta, gamma</code>
+            <code>      event.interval</code>
+            <code>    )</code>
+            <code>  }</code>
+            <code>);</code>
+        </pre>
+    </section>
+    <section class="slide" id="device-orientation-caniuse">
+        <img src="pictures/device-orient-motion.png" height="400" />
+    </section>
+    <section class="slide" id="device-orientation-next">
+        <h2>А потом...</h2>
+        <ul>
+            <li>AccelerometerSensor - <a href="http://www.w3.org/TR/accelerometer/">www.w3.org/TR/accelerometer</a></li>
+            <li>GyroscopeSensor - <a href="http://www.w3.org/TR/gyroscope/">www.w3.org/TR/gyroscope</a></li>
+            <li>MagnetometerSensor - <a href="http://www.w3.org/TR/magnetometer/">www.w3.org/TR/magnetometer</a></li>
+        </ul>
+        <p>First Public Working Draft (13 September 2016)</p>
+    </section>
+
+    <!-- Video capture block -->
+    <section class="slide" id="whatthe-video">
+        <img src="pictures/whatthe-poliwhirl.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-video-view">
+        <h2 class="next">Poliwhirl</h2>
+        <img src="pictures/whatthe-poliwhirl-view.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="video_capture">
+        <h2>Захват видео с камеры</h2>
+        <img src="pictures/poliwhirl.png" height="262" alt="Poliwhirl" />
+        <style>
+            #video_capture img {
+                position: absolute;
+                bottom: 50px;
+                left: 100px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="video-standard">
+        <h2>Media Capture and Streams</h2>
+        <p>Стандарт: <a href="https://w3c.github.io/mediacapture-main/">w3c.github.io/mediacapture-main</a></p>
+        <p>Editor's Draft (13 September 2016)</p>
+    </section>
+    <section class="slide" id="video-demo">
+        <input type="button" value="Показать видео с камеры" class="startBtn js-video-start" />
+        <video class="js-video-el" width="640" height="480" autoplay></video>
+        <script>
+            (function () {
+                var videoStart = document.querySelector('.js-video-start');
+                var videoEl = document.querySelector('.js-video-el');
+
+                videoStart.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    navigator.mediaDevices.enumerateDevices()
+                        .then(function (devices) {
+
+                            for (var i = 0; i < devices.length; i++) {
+                                var device = devices[i];
+                                console.log(device.kind, ": ", device.label +
+                                        " id = " + device.deviceId);
+                                if (device.kind === 'videoinput') {
+                                    return navigator.mediaDevices.getUserMedia({
+                                        video: {
+                                            width: 640,
+                                            height: 480,
+                                            deviceId: device.deviceId
+                                        }
+                                    });
+                                }
+                            }
+
+                            return Promise.resolve('q');
+                        })
+                        .then(function( stream ){
+                            console.log(stream);
+                            if( stream === 'q'){
+                                return 0;
+                            }
+
+                            videoEl.src = window.URL.createObjectURL(stream);
+                        })
+                        .catch(function (err) {
+                            console.log(err.name + ": " + err.message);
+                        });
+                })
+            })()
+        </script>
+        <style>
+            #video-demo .startBtn {
+                display: block;
+                font-size: 2em;
+                padding: 10px 40px;
+                margin: -60px auto 10px auto;
+            }
+            #video-demo video {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </section>
+    <section class="slide" id="video-code">
+        <pre>
+            <code>navigator.mediaDevices.<mark>enumerateDevices()</mark></code>
+            <code>  .then(function (<mark>devices</mark>) { ... });</code>
+        </pre>
+        <pre>
+            <code>navigator.mediaDevices.<mark>getUserMedia</mark>({</code>
+            <code>  video: { deviceId: device[i].deviceId }</code>
+            <code>}).then(function (<mark>stream</mark>) { ... });</code>
+        </pre>
+    </section>
+
+    <!-- 3D -->
+    <section class="slide" id="whatthe-3d">
+        <img src="pictures/whatthe-porygon.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="whatthe-3d-view">
+        <h2 class="next">Porygon</h2>
+        <img src="pictures/whatthe-porygon-view.png" alt class="cover"/>
+    </section>
+    <section class="slide" id="three_d">
+        <h2>3D</h2>
+        <img src="pictures/porygon.png" height="262" alt="Porygon" />
+        <style>
+            #three_d img {
+                position: absolute;
+                bottom: 50px;
+                left: 100px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="three_d_webgl">
+        <img src="pictures/WebGL_Logo.svg.png" height="125" width="300" alt="WebGL" /><br />
+        <img class="next" src="pictures/threejs.png" height="116" width="322" alt="three.js" /><br />
+        <img class="next" src="pictures/aframe-name-white.svg" height="70" alt="A-Frame" />
+    </section>
+    <section class="slide" id="three_d_a_frame">
+        <h2><img src="pictures/aframe-name-white.svg" height="50" alt="A-Frame" /></h2>
+        <pre><code>&lt;a-scene>
+  &lt;a-sphere position="0 1.25 -1" radius="1" ...>&lt/a-sphere>
+  &lt;a-box position="-1 0.5 1" rotation="0 45 0" ...>&lt;/a-box>
+  &lt;a-sky color="#ECECEC">&lt/a-sky>
+  &lt;a-entity position="0 0 3.8">
+    &lt;a-camera>&lt;/a-camera>
+  &lt;/a-entity>
+&lt;/a-scene></code></pre>
+        <style>
+            #three_d_a_frame h2 {
+                margin-top: -30px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="aframe-demo">
+        <iframe src="modules/aframe-demo.html" width="1020px" height="640px"></iframe>
+        <style>
+            #aframe-demo {
+                padding: 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="webgl-support">
+        <img src="pictures/webgl-support.png" height="430" alt="webgl support table" />
+    </section>
+
+    <section class="slide" id="what-next">
+        <h2>Ок, мы знаем технологии, что дальше?</h2>
+
+    </section>
+
+    <section class="slide" id="reallife-demo">
+        <h2>Reallife демо.</h2>
+    </section>
+
+    <section class="slide" id="end">
+        <h2>Вопросы?</h2>
+        <p>
+            Егор Коновалов<br />
+            @agegorin<br />
+            Центр Высоких Технологий, 2016<br />
+        </p>
+    </section>
+
+    <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
+</body>
+</html>

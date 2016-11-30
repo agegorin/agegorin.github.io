@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>device motion demo</title>
+</head>
+<body>
+    <pre class="js-demo">
+
+    </pre>
+<script>
+    var output = document.querySelector('.js-demo');
+
+    var debouncedTime = new Date();
+    function debounce ( func, args, time) {
+        var currTime = new Date();
+        if( currTime - debouncedTime > time ) {
+            func.apply(null, args);
+            debouncedTime = currTime;
+        }
+    }
+
+    function showData (event) {
+        output.innerText =
+                'acceleration\n' +
+                '  .x = ' + event.acceleration.x + '\n' +
+                '  .y = ' + event.acceleration.y + '\n' +
+                '  .z = ' + event.acceleration.z + '\n' +
+                '\naccelerationIncludingGravity\n' +
+                '  .x = ' + event.accelerationIncludingGravity.x + '\n' +
+                '  .y = ' + event.accelerationIncludingGravity.y + '\n' +
+                '  .z = ' + event.accelerationIncludingGravity.z + '\n' +
+                '\nrotationRate\n' +
+                '  .aplha = ' + event.rotationRate.alpha + '\n' +
+                '  .beta = ' + event.rotationRate.beta + '\n' +
+                '  .gamma = ' + event.rotationRate.gamma + '\n' +
+                '\ninterval = ' + event.interval;
+    }
+
+    window.addEventListener('devicemotion',
+        function (event) {
+            debounce( showData, [event], 1000);
+        }
+    );
+</script>
+</body>
+</html>
