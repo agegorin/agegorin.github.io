@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Презентация на shower в стиле ЦВТ.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/shower-htc/styles/screen-16x10.css">
+    <link rel="stylesheet" href="src/highlight/styles/idea.css">
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Презентация на shower в стиле ЦВТ.</h1>
+        <p>Используй меня полностью!</p>
+    </header>
+    <section class="slide" id="first">
+        <h2>VR in da Web</h2>
+        <p>Егор Коновалов и Любовь Ложкина, ЦВТ</p>
+        <img src="pictures/first.gif" alt="Toni Stark" class="cover height">
+        <style>
+            #first h2 {
+                margin: 30px 0 0;
+                font-size: 70px;
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 10px;
+                border-radius: 4px;
+                position: absolute;
+                right: 50px;
+                text-align: right;
+                width: 355px;
+            }
+
+            #first p {
+                margin: 10px 0 0;
+                color: #000;
+                font-style: italic;
+                font-size: 20px;
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 10px;
+                border-radius: 4px;
+                position: absolute;
+                top: 500px;
+                left: 50px;
+                width: 210px;
+            }
+
+            #first img {
+                width: 100%;
+            }
+            #first::after {
+                visibility: hidden;
+            }
+        </style>
+    </section>
+    <section class="slide" id="webgl">
+        <h2 class="webgl-caption">3D в браузере — </h2>
+        <img src="pictures/webgl.png" alt="webgl" class="logo">
+        <img src="pictures/webgl-use.png" alt="webgl поддержка браузерами" class="cover usage">
+        <p>
+            <b>WebGL</b> — это <b>контекст canvas HTML</b>, который обеспечивает API 3D графики без использования плагинов.
+            <a href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks">Список фреймфорков</a>
+        </p>
+        <style>
+            #webgl .webgl-caption{
+                display: inline;
+                vertical-align: top;
+                line-height: 100px;
+            }
+            #webgl .logo{
+                height: 100px;
+            }
+            #webgl p {
+                margin-top: 270px;
+            }
+            #webgl .usage{
+                top: 55%;
+            }
+
+        </style>
+    </section>
+    <section class="slide" id="noGame">
+        <h2>3D — это не только игры</h2>
+        <p>
+            3D графику применяют в различных сферах:
+            <a href="http://graphics.latimes.com/mars-gale-crater-vr/">наука</a>,
+            <a href="https://web.chemdoodle.com/demos/molgrabber-3d/">медицина</a>,
+            <a href="http://kadjar.littleworkshop.fr/">реклама</a>,
+            <a href="https://britishmuseum.withgoogle.com/">инфографика</a>,
+            <a href="https://yandex.ru/everest/">туризм</a> и, конечно,
+            <a href="http://www.angrywifegame.com/">игры</a>.
+        </p>
+
+        <img src="pictures/world.gif"></img>
+
+        <style>
+            #noGame img {
+                height: 300px;
+                display: flex;
+                margin: auto;
+            }
+        </style>
+    </section>
+    <section class="slide" id="vr">
+        <h2>VR — следующий шаг в 3D</h2>
+        <ul>
+            Основные отличия VR от обычной 3D графики:
+            <li><b>двойной рендеринг</b> (для каждого глаза отдельно),</li>
+            <li>наличие <b>контроллеров движения</b></li>
+        </ul>
+        <img src="pictures/vr.png" />
+        <img src="pictures/vr.gif" />
+        <style>
+            #vr img {
+                height: 250px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="device">
+        <h2 class="shout">Девайсы</h2>
+        <img class="cover" src="pictures/device.jpg"/>
+        <style>
+            #device h2 {
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 16px;
+                border-radius: 4px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="expensive-device">
+        <h2>Крутые, дорогие, непопулярные</h2>
+        <ul>
+            <li><a href="https://www.oculus.com/">Oculus Rift</a></li>
+            <li><a href="https://www.vive.com/ru/">HTC Vive</a></li>
+            <li><a href="https://www.playstation.com/ru-ru/explore/playstation-vr/">PlayStation VR</a></li>
+        </ul>
+        <img src="pictures/htc-oculus-sony.jpg"/>
+        <img class="next" src="pictures/controllers.jpg"/>
+        <style>
+            #expensive-device li {
+                line-height: 140px;
+            }
+            #expensive-device img {
+                margin-top: 10px;
+                height: 70%;
+                position: absolute;
+                top: 150px;
+                right: 150px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="inexpensive-device">
+        <h2>Простые, недорогие, популярные</h2>
+        <ul>
+            <li>
+                <a href="http://www.samsung.com/ru/wearables/gear-vr-r323/">Samsung Gear VR</a>
+                <p>S6, S6 edge, S6 edge+, S7, S7 edge, Note5.</p>
+            </li>
+            <li>
+                <a href="https://vr.google.com/daydream/phones/">Google Daydream</a>
+                <p>Android 7.0. Axon 7, Pixel, Moto Z, Mate 9 Pro, ZenFone AR.</p>
+            </li>
+            <li>
+                <a href="https://vr.google.com/cardboard/">Google Cardboard</a>
+                <p>Android 4.1, iOS 6.0, Windows Phone 7.0 и выше.</p>
+            </li>
+        </ul>
+        <img class="samsung" src="pictures/samsung-gear-vr.jpeg"/>
+        <img class="deydream" src="pictures/deydream.png"/>
+        <img class="cardboard" src="pictures/cardboard.jpg"/>
+
+        <style>
+            #inexpensive-device li {
+                width: 60%;
+                margin-bottom: 40px;
+            }
+            #inexpensive-device li p {
+                font-size: 20px;
+            }
+            #inexpensive-device img {
+                width: 26%;
+                position: absolute;
+                right: 150px;
+            }
+            #inexpensive-device .samsung {
+                top: 160px;
+            }
+            #inexpensive-device .deydream {
+                top: 295px;
+            }
+            #inexpensive-device .cardboard {
+                top: 460px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="webvr">
+        <h2>VR в браузере - <a href="https://webvr.info/">WebVR</a></h2>
+        <ul>
+            <li><a href="https://github.com/cjcliffe/CubicVR.js/wiki/Examples-and-demos">CubicVR</a> (последний релиз в 2011)</li>
+            <li><a href="https://github.com/facebookincubator/react-vr">React VR</a> (<b>pre-release</b> в декабре 2016)</li>
+            <li><a href="https://aframe.io/">A-Frame</a></li>
+        </ul>
+        <p>
+            Также Вы можете использовать <b>любой фреймворк</b> для создания 3D контента (например,
+            <a href="https://threejs.org/examples/#webgl_animation_cloth">three.js</a>) и <b>сами реализовать VR режим</b>.
+        </p>
+        <a href="https://webvr.info/">
+            <img src="pictures/webvr-logo.png"/>
+        </a>
+        <style>
+            #webvr img {
+                width: 400px;
+                position: absolute;
+                top: 100px;
+                right: 100px;
+            }
+            #webvr p {
+                margin-top: 150px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="zhdun">
+        <img class="cover" src="pictures/zhdun.jpg" />
+        <h2>Подождем релиза <br/>React VR</h2>
+        <style>
+            #zhdun img {
+                left: 30%;
+                height: 100%;
+            }
+            #zhdun h2 {
+                text-align: right;
+            }
+        </style>
+    </section>
+    <section class="slide" id="aframe">
+        <h2>A-Frame</h2>
+        <ul>
+            <b>+ Плюсы:</b>
+            <li>декларативность,</li>
+            <li>частые релизы,</li>
+            <li>модульность (<a href="https://wikipedia.org/wiki/Entity_component_system">ECS</a> паттерн),</li>
+            <li>много сторонних компонентов.</li>
+        </ul>
+        <ul>
+            <b>- Минусы:</b>
+            <li>нет падающих теней,</li>
+            <li>нет физики.</li>
+        </ul>
+        <img src="pictures/aframe.png"/>
+        <style>
+            #aframe img {
+                width: 550px;
+                position: absolute;
+                top: 120px;
+                right: 0;
+            }
+        </style>
+    </section>
+    <section class="slide scene-slide" id="hello">
+        <h2>Hello VR world!</h2>
+        <script src="src/aframe.min.js"></script>
+        <div class="cover scene-container">
+            <!--<a-scene embedded>
+                <a-box position="-1 1.5 0" rotation="0 45 0" height="3" color="red"></a-box>
+
+                <a-sky color="#ECECEC"></a-sky>
+                <a-camera position="0 0 3.8"></a-camera>
+            </a-scene>-->
+        </div>
+
+        <style>
+            #hello .scene-container{
+                width: 100%;
+                height: 100%;
+            }
+            .a-enter-vr{
+                z-index: 1000;
+            }
+        </style>
+    </section>
+    <section class="slide" id="hello-code">
+        <h2>HTML и больше ничего!</h2>
+        <pre>
+            <code>&lt;script src="https://aframe.io/.../aframe.min.js"/></code>
+            <code><span class="tag">&lt;<span class="title">a-scene</span> <span class="attribute">embedded</span>></span></code>
+            <code><span class="tag">   &lt;<span class="title">a-box</span> <span class="attribute">position=</span><span class="value">"-1 1.5 1"</span> <span class="attribute">rotation</span>=<span class="value">"0 45 0"</span> </span></code>
+            <code><span class="tag">          <span class="attribute">height</span>=<span class="value">"3"</span> <span class="attribute">color</span>=<span class="value">"red"</span>></span></code>
+            <code><span class="tag">   &lt;/<span class="title">a-box</span>></span></code>
+            <code><span class="tag">   &lt;<span class="title">a-sky</span> <span class="attribute">color</span>=<span class="value">"#ECECEC"</span>>&lt;/<span class="title">a-sky</span>></span></code>
+            <code><span class="tag">   &lt;<span class="title">a-camera</span> <span class="attribute">position</span>=<span class="value">"0 0 3.8"</span>>&lt;/<span class="title">a-camera></span></span></code>
+            <code><span class="tag">&lt;/<span class="title">a-scene</span>></span></code>
+        </pre>
+        <img src="pictures/code.jpg"/>
+        <style>
+            #hello-code pre {
+                background-color: #efefef;
+                margin-left: -25px;
+            }
+            #hello-code img {
+                position: absolute;
+                bottom: 0;
+                right: 100px;
+                width: 200px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="wzhuh">
+        <img class="cover" src="pictures/wzhuh.jpg" />
+        <div class="code">10 строк HTML кода</div>
+        <div class="dev">и ты VR-разработчик</div>
+        <style>
+            #wzhuh .code, #wzhuh .dev{
+                position: absolute;
+                font-size: 35px;
+            }
+            #wzhuh .code {
+                top: 40px;
+                right: 200px;
+            }
+            #wzhuh .dev {
+                top: 420px;
+                right: 70px;
+            }
+        </style>
+    </section>
+    <section class="slide scene-slide" id="external-objects">
+        <h2>Внешние 3D модели</h2>
+        <pre>
+            <code><span class="tag">&lt;<span class="title">a-scene</span> <span class="attribute">embedded</span>></span></code>
+            <code>    <span class="tag">&lt;<span class="title">a-assets</span>></span></code>
+            <code>        <span class="tag">&lt;<span class="title">a-asset-item</span></span></code>
+            <code>            <span class="tag"><span class="attribute">id</span>=<span class="value">"teapotModel"</span></span></code>
+            <code>            <span class="tag"><span class="attribute">src</span>=<span class="value">"src/obj/teapot.obj"</span>></span></code>
+            <code>        <span class="tag">&lt;/<span class="title">a-asset-item</span>></span></code>
+            <code>        ...</code>
+            <code>    <span class="tag">&lt;/<span class="title">a-assets</span>></span></code>
+            <code>    <span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">position</span>=<span class="value">"0 0 -5"</span></span></code>
+            <code>          <span class="tag"><span class="attribute">obj-model</span>=<span class="value">"obj: #teapotModel;</span></span></code>
+            <code>              <span class="tag"><span class="value">mtl: #teapotTexture"</span>></span></code>
+            <code>          <span class="tag">&lt;/<span class="title">a-entity</span>></span></code>
+            <code><span class="tag">&lt;/<span class="title">a-scene</span>></span></code>
+        </pre>
+
+        <div class="scene-container">
+            <!--<a-scene embedded>-->
+                <!--<a-assets>-->
+                    <!--<a-asset-item id='teapotModel' src='src/obj/teapot.obj'></a-asset-item>-->
+                    <!--<a-asset-item id='teapotTexture' src='src/obj/teapot.mtl'></a-asset-item>-->
+                <!--</a-assets>-->
+
+                <!--<a-entity position="0 0 -5"-->
+                        <!--obj-model="obj: #teapotModel; mtl: #teapotTexture"></a-entity>-->
+
+                <!--<a-sky color="#ECECEC"></a-sky>-->
+                <!--<a-camera position="0 1 2"></a-camera>-->
+            <!--</a-scene>-->
+        </div>
+
+        <style>
+            #external-objects {
+                padding-top: 20px;
+            }
+            #external-objects h2 {
+                margin-bottom: 10px;
+            }
+            #external-objects pre {
+                font-size: smaller;
+                background: #efefef;
+                width: 500px;
+            }
+            #external-objects .mark {
+                background: #fafaa2;
+            }
+            #external-objects .scene-container {
+                height: 100%;
+                width: 40%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </section>
+    <section class="slide scene-slide" id="ecs">
+        <h2>Entity-Component-System</h2>
+        <ul>
+            <li id="entity"><pre><code><span class="tag">&lt;<span class="title">a-entity</span>>&lt;/<span class="title">a-entity</span>></span></code></pre></li>
+            <li id="geometry"><pre><code><span class="tag">&lt;<span class="title">a-entity</span> <span class="mark">geometry="primitive: torus"</span>/></span></code></pre></li>
+            <li id="material"><pre><code><span class="tag">&lt;<span class="title">a-entity</span> geometry="primitive: torus"
+          <span class="mark">material="src: texture.jpg"</span>/></span></code></pre></li>
+            <li id="scale"><pre><code><span class="tag">&lt;<span class="title">a-entity</span> geometry="primitive: torus"
+          material="src: texture.jpg"
+          <span class="mark">scale="2 2 2"</span>/></span></code></pre></li>
+        </ul>
+
+        <div class="scene-container">
+            <!--<a-scene embedded>
+                <a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: torus">
+                </a-entity>
+                <a-entity geometry="primitive: torus"
+                          material="src: pictures/texture.jpg">
+                </a-entity>
+                <a-entity geometry="primitive: torus"
+                          material="src: pictures/texture.jpg"
+                          scale="2 2 2">
+                </a-entity>
+
+                <a-sky color="#ECECEC"></a-sky>
+                <a-camera position="0 -1.5 2"></a-camera>
+            </a-scene>-->
+        </div>
+
+        <style>
+            #ecs ul {
+                width: 70%;
+                margin-left: -70px;
+            }
+            #ecs li {
+                background-color: #efefef;
+                font-size: 22px;
+                margin-bottom: 20px;
+                min-height: 65px;
+            }
+            #ecs pre {
+                display: inline;
+            }
+            #ecs code {
+                background-color: transparent;
+                display: inline;
+            }
+            #ecs .mark {
+                background: #fafaa2;
+            }
+            #ecs .scene-container {
+                height: 100%;
+                width: 40%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </section>
+    <section class="slide" id="a-frame-components">
+        <h2>Компоненты A-Frame 0.5.0</h2>
+        <ol class="double">
+            <li>blend-model</li>
+            <li>camera</li>
+            <li>collada-model</li>
+            <li>cursor</li>
+            <li>debug</li>
+            <li>embedded</li>
+            <li>fog</li>
+            <li>geometry</li>
+            <li>gltf-model <span class="new">new</span></li>
+            <li>hand-controls</li>
+            <li>keyboard-shortcuts</li>
+            <li>light</li>
+            <li>look-controls</li>
+            <li>material</li>
+            <li>obj-model</li>
+            <li>oculus-touch-controls</li>
+            <li>pool</li>
+            <li>position</li>
+            <li>raycaster</li>
+            <li>rotation</li>
+            <li>scale</li>
+            <li>screenshot</li>
+            <li>sound</li>
+            <li>stats</li>
+            <li>text <span class="new">new</span></li>
+            <li>tracked-controls</li>
+            <li>visible</li>
+            <li>vive-controls</li>
+            <li>vr-mode-ui</li>
+            <li>wasd-controls</li>
+        </ol>
+        <style>
+            #a-frame-components h2 {
+                margin-bottom: 20px;
+            }
+            #a-frame-components .double {
+                column-count: 3;
+            }
+            #a-frame-components li::before {
+                padding-right: .1em;
+            }
+            #a-frame-components .new {
+                color: white;
+                background-color: green;
+                padding: 2px 6px;
+                border-radius: 4px;
+            }
+        </style>
+    </section>
+    <section class="slide scene-slide" id="custom-component">
+        <h2>Свой компонент</h2>
+        <pre>
+            <code>&lt;script></code>
+            <code>AFRAME.registerComponent(<span class="mark string">"rotate-on-tick"</span>, {</code>
+            <code>  <span class="variable">schema</span>: {</code>
+            <code>    <span class="variable">speed</span>: {<span class="variable">type</span>: <span class="string">"number"</span>, <span class="variable">default</span>: <span class="number">0.1</span>}</code>
+            <code>  },</code>
+            <code>  <b>tick</b>: function() {</code>
+            <code>    <span class="keyword">this</span>.el.object3D.rotation.z +=</code>
+            <code>      <span class="keyword">this</span>.data.speed;</code>
+            <code>  }</code>
+            <code>});</code>
+            <code><span class="tag">&lt;/<span class="title">script</span>></span></code>
+            <code><span class="tag">&lt;<span class="title">a-scene</span> <span class="attribute">embedded</span>></span></code>
+            <code>    <span class="tag">&lt;<span class="title">a-torus-knot</span> ...</span></code>
+            <code>        <span class="tag"><span class="mark"><span class="attribute">rotate-on-tick</span></span>=<span class="value">"speed: 0.01"</span> /></span></code>
+            <code><span class="tag">&lt;/<span class="title">a-scene</span>></span></code>
+        </pre>
+        <script>
+            AFRAME.registerComponent('rotate-on-tick', {
+                schema: {
+                    speed: {type: 'number', default: 0.1}
+                },
+                tick: function(t, dt) {
+                    var el = this.el;
+                    var data = this.data;
+                    el.object3D.rotation.z += data.speed;
+                }
+            });
+        </script>
+        <div class="scene-container">
+            <!--<a-scene embedded>
+                <a-torus-knot position="0 1.5 0"
+                              color="#6cd9f5"
+                              rotate-on-tick="speed: 0.01">
+                </a-torus-knot>
+
+                <a-sky color="#ECECEC"></a-sky>
+                <a-camera position="0 0 3"></a-camera>
+            </a-scene>-->
+        </div>
+        <style>
+            #custom-component {
+                padding-top: 45px;
+            }
+            #custom-component h2 {
+                margin-bottom: 10px;
+            }
+            #custom-component pre {
+                background-color: #efefef;
+                margin-left: -45px;
+                width: 67%;
+            }
+            #custom-component code {
+                font-size: 22px;
+                line-height: 1.6;
+            }
+            #custom-component .mark {
+                background: #fafaa2;
+                font-weight: 900;
+            }
+            #custom-component .scene-container {
+                height: 80%;
+                width: 40%;
+                position: absolute;
+                top: 105px;
+                right: 0;
+            }
+        </style>
+    </section>
+    <section class="slide" id="component-inside">
+        <h2>Внутренний мир компонента</h2>
+        <pre>
+            <code>AFRAME.registerComponent(<span class="string">'component-name'</span>, {</code>
+            <code>    <b>schema</b>: {},</code>
+            <code>    <b>init</b>: function () {},</code>
+            <code>    <b>update</b>: function () {},</code>
+            <code>    <b>tick</b>: function () {},</code>
+            <code>    <b>remove</b>: function () {},</code>
+            <code>    <b>pause</b>: function () {},</code>
+            <code>    <b>play</b>: function () {}</code>
+            <code>});</code>
+        </pre>
+        <img src="pictures/inside.jpg" class="inside"/>
+        <img src="pictures/kevin.png" class="kevin"/>
+        <style>
+            #component-inside h2 {
+                margin-bottom: 15px;
+            }
+            #component-inside pre {
+                background-color: #efefef;
+            }
+            #component-inside img {
+                position: absolute;
+                right: 100px;
+                width: 400px;
+            }
+            #component-inside .inside {
+                top: 250px;
+            }
+            #component-inside .kevin {
+                top: 400px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="imagination">
+        <h2>Используй компонентный подход</h2>
+        <img class="cover height" src="pictures/imagination.png">
+        <p>
+            а еще <a href="https://aframe.io/docs/0.5.0/core/systems.html#registering-a-system">registerSystem</a>,
+            <a href="https://aframe.io/docs/0.5.0/components/material.html#register-a-custom-material">registerShader</a>,
+            <a href="https://aframe.io/docs/0.5.0/components/geometry.html#register-a-custom-geometry">registerGeometry</a>.
+        </p>
+        <style>
+            #imagination h2 {
+                margin-top: -100px;
+            }
+            #imagination p {
+                margin-top: 500px;
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 10px;
+                border-radius: 4px;
+                width: 650px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="community-components">
+        <h2>Сторонние компоненты</h2>
+        <ul class="double">
+            <li>
+                <a title="Интеграция A-Frame и React"
+                   href="https://github.com/ngokevin/aframe-react">aframe-react</a>
+            </li>
+            <li>
+                <a title="Градиентная заливка фоновой сферы"
+                   href="https://github.com/zcanter/aframe-gradient-sky">aframe-gradient-sky</a>
+            </li>
+            <li>
+                <a title="Расположение массива объектов в сетке разной геометрии"
+                   href="https://github.com/ngokevin/aframe-layout-component">aframe-layout-component</a>
+            </li>
+            <li>
+                <a title="Объект будет поворачиваться лицом к активной камере"
+                   href="https://github.com/ngokevin/aframe-look-at-component">aframe-look-at-component</a>
+            </li>
+            <li>
+                <a title="Привязка событий к объекту"
+                   href="https://github.com/ngokevin/aframe-event-set-component">aframe-event-set-component</a>
+            </li>
+            <li>
+                <a title="Симмуляция гравитации и столкновений"
+                   href="https://github.com/donmccurdy/aframe-physics-system">aframe-physics-system</a>
+            </li>
+            <li>
+                <a title="Замена сферической фоновой фотографии на развертку по кубу"
+                   href="https://github.com/bryik/aframe-cubemap-component">aframe-cubemap-component</a>
+            </li>
+            <li>
+                <a title="Интерполирует динамическое изменение позиции объекта"
+                   href="https://github.com/scenevr/interpolation-component">aframe-interpolation-component</a>
+            </li>
+            <li>
+                <a title="Геометрия компонента созданная при помощи набора линий"
+                   href="https://github.com/andreasplesch/aframe-meshline-component">aframe-meshline-component</a>
+            </li>
+            <li>
+                <a title="Создает облако частиц"
+                   href="https://github.com/IdeaSpaceVR/aframe-particle-system-component">aframe-particle-system-component</a>
+            </li>
+            <li>
+                <a title="Фрактальная графика"
+                   href="https://github.com/nylki/aframe-lsystem-component">aframe-lsystem-component</a>
+            </li>
+            <li>
+                и многие <a href="https://github.com/aframevr/awesome-aframe#components">другие</a>
+            </li>
+        </ul>
+        <style>
+            #community-components {
+                font-size: 24px;
+                line-height: 3;
+            }
+        </style>
+    </section>
+    <section class="slide" id="mathematics">
+        <h2>На самом деле не все так просто...</h2>
+        <img class="cover" src="pictures/math.png" />
+        <style>
+            #mathematics p {
+                margin-left: 250px;
+                margin-top: 400px;
+                z-index: 1000;
+            }
+        </style>
+    </section>
+    <section class="slide" id="interaction">
+        <img class="cover width place top" src="pictures/button.gif"/>
+        <img class="gif place bottom right" src="pictures/interaction.gif"/>
+        <img class="gif place bottom left" src="pictures/hover.gif"/>
+        <!-- Возможно, слишком много анимации, глазу трудно сосредоточиться -->
+        <h2 class="shout">Совершенно другое взаимодействие</h2>
+        <style>
+            #interaction h2 {
+                font-size: 60px;
+                top: 46%;
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 10px;
+                border-radius: 4px;
+            }
+            #interaction .gif {
+                width: 50%;
+            }
+        </style>
+    </section>
+    <section class="slide" id="expectation-reality">
+        <h2>3D графика в 2K17</h2>
+        <img class="cover height" src="pictures/Woody.png">
+        <div class="next img-container expectation">
+            <img  src="pictures/expectation.jpg">
+            <div>Ожидание</div>
+        </div>
+        <div class="next img-container reality">
+            <img  src="pictures/reality.jpg">
+            <div>Реальность</div>
+        </div>
+
+        <div class="footnote">
+            История игрушек - мультфильм 1995 года
+        </div>
+        <style>
+            #expectation-reality h2, #expectation-reality .footnote, #expectation-reality .img-container div {
+                background-color: rgba(255, 255, 255, 0.75);
+                border-radius: 4px;
+            }
+            #expectation-reality h2 {
+                padding: 10px;
+                width: 380px;
+            }
+            #expectation-reality .footnote {
+                position: absolute;
+                bottom: 40px;
+                padding: 0 10px;
+            }
+            #expectation-reality .expectation, #expectation-reality .reality {
+                position: absolute;
+                top: 36%;
+                width: 36%;
+            }
+            #expectation-reality .expectation {
+                left: 0;
+            }
+            #expectation-reality .reality {
+                right: 0;
+            }
+            #expectation-reality .img-container img {
+                width: 100%;
+            }
+            #expectation-reality .img-container div {
+                width: 100%;
+                text-align: center;
+                margin-top: -15px;
+            }
+        </style>
+    </section>
+    <section class="slide scene-slide" id="questions">
+        <h2>Вопросы?</h2>
+        <p>
+            Егор Коновалов и Любовь Ложкина<br />
+            @agegorin<br />
+            Центр Высоких Технологий, 2017<br />
+        </p>
+
+        <script src="src/aframe-physics-system.js"></script>
+        <script>
+            AFRAME.registerComponent('pool-sphere-generator', {
+                schema: {
+                    radius: {type: 'number', default: 10}
+                },
+                init: function () {
+                    this.index = 0;
+                },
+                tick: function(t, dt) {
+                    var el = this.el;
+                    var data = this.data;
+                    var poolEl = this.el.sceneEl.components.pool__sphere;
+
+                    var entity = poolEl.requestEntity();
+
+                    var radius = data.radius;
+                    var startHeight = 100;
+                    var position = this.getRandomNumber(-radius, radius) + ' ' +
+                        this.getRandomNumber(startHeight, radius) + ' ' +
+                        this.getRandomNumber(-radius, radius);
+                    entity.setAttribute('position', position);
+
+                    var id = "entity" + this.index;
+                    entity.id = id;
+                    el.appendChild(entity);
+                    this.index++;
+
+                    this.returnEntity(id);
+                },
+                getRandomNumber: function(min, max) {
+                    return Math.random() * (max - min) + min;
+                },
+                returnEntity: function(id) {
+                    var poolEl = this.el.sceneEl.components.pool__sphere;
+                    var entity = document.getElementById(id);
+
+                    function returnToPool(entity) {
+                        poolEl.returnEntity(entity);
+                    }
+                    setTimeout(returnToPool, 5000, entity);
+                }
+            });
+        </script>
+        <div class="cover scene-container">
+            <!--<a-scene fog="type: linear; color: #ECECEC; far: 150"
+                     embedded
+                     pool__sphere="mixin: blackDynamicSphere; size: 250">
+                <a-assets>
+                    <a-mixin id="blackDynamicSphere"
+                             geometry="primitive: sphere"
+                             material="color: black; metalness: 0.01;"
+                             dynamic-body>
+                    </a-mixin>
+                    <img id="floor" src="pictures/floor.jpg">
+                </a-assets>
+                <a-sphere position="0 3 2"
+                          material="color: blue; opacity: 0.1; wireframe: true;"
+                          radius="2"
+                          static-body>
+                </a-sphere>
+                <a-sky color="blue"
+                       radius="100">
+                </a-sky>
+                <a-box width="200"
+                       depth="200"
+                       height="2"
+                       material="src: #floor; repeat: 100 100;"
+                       static-body>
+                </a-box>
+                <a-camera position="0 0 2"></a-camera>
+
+                <a-entity pool-sphere-generator="radius: 20"></a-entity>
+            </a-scene>-->
+        </div>
+        <style>
+            #questions h2 {
+                width: 210px;
+            }
+            #questions p {
+                width: 410px;
+                margin-top: 250px;
+            }
+            #questions h2, #questions p {
+                background-color: rgba(255, 255, 255, 0.75);
+                padding: 10px;
+                border-radius: 4px;
+            }
+            #questions .scene-container {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </section>
+
+    <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
+
+    <script src="src/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad('html', 'javascript');</script>
+
+    <script src="src/slidesMap.js"></script>
+    <!-- Подгружаем/удаляем сцены при переходе на слайд с примерами -->
+    <script>
+        var slidesMap = window.slidesMap;
+        var sceneContainerSelector = '.scene-container';
+
+        function addScene(slide) {
+            //console.log('add');
+            var slideInfo = slidesMap.get(slide.id);
+            var sceneContainer = slide.querySelector(sceneContainerSelector);
+            sceneContainer.appendChild(slideInfo.content);
+        }
+        function deleteScene(slide) {
+            //console.log('delete');
+            var sceneContainer = slide.querySelector(sceneContainerSelector);
+            while (sceneContainer.firstChild) {
+                sceneContainer.removeChild(sceneContainer.firstChild);
+            }
+        }
+
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                //console.log(mutation);
+                if(mutation.attributeName === 'class') {
+                    var slide = mutation.target;
+                    if(slide.classList.contains('active')) {
+                        addScene(slide);
+                    } else {
+                        deleteScene(slide);
+                    }
+                }
+            });
+        });
+        var slides = document.querySelectorAll('.slide.scene-slide');
+        slides.forEach(function(slide) {
+            observer.observe(slide, { attributes: true });
+        });
+    </script>
+</body>
+</html>
